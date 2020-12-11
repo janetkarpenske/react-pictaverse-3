@@ -56,15 +56,15 @@ handleEditClick = () => {
   dispatch(action);
 }
 
-// handleEditingPostInList = (postToEdit) => {
-//   const { dispatch } = this.props;
-//     const action = a.addPost(postToEdit);
-//     dispatch(action);
-//     const action2 = a.toggleEdit();
-//     dispatch(action2);
-//     const action3 = a.setPostNull();
-//     dispatch(action3);
-// }
+handleEditingPostInList = (postToEdit) => {
+  const { dispatch } = this.props;
+    const action = a.addPost(postToEdit);
+    dispatch(action);
+    const action2 = a.toggleEdit();
+    dispatch(action2);
+    const action3 = a.setPostNull();
+    dispatch(action3);
+}
 
 render() {
   let currentlyVisibleState = null;

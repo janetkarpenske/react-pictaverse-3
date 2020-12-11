@@ -10,18 +10,18 @@ export const toggleForm = () => ({
 export const toggleEdit = () => ({
   type: 'TOGGLE_EDIT'
 });
-// export const addPost = (post) => {
-//   const { name, brand, price, alcoholContent, amountLeft, id } = post;
-//   return {
-//     type: 'ADD_POST',
-//     name: name,
-//     brand: brand,
-//     price: price,
-//     alcoholContent: alcoholContent,
-//     amountLeft: amountLeft,
-//     id: id
-//   }
-// }
+export const addPost = (post) => {
+  const { name, brand, price, alcoholContent, amountLeft, id } = post;
+  return {
+    type: 'ADD_POST',
+    name: name,
+    brand: brand,
+    price: price,
+    alcoholContent: alcoholContent,
+    amountLeft: amountLeft,
+    id: id
+  }
+}
 export const addDislike = id => ({
   type: 'ADD_DISLIKE',
   id
