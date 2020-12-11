@@ -12,7 +12,7 @@ function PostDetails(props) {
       <h4>Amount Left (in pints): {post.amountLeft}</h4>
       <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDislike(post.id) }>Dislike</button>
       <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button>
-      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingEdit(post.id) }>Edit This Post</button>
+      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingEdit(post.id) }>Edit Post</button>
     </React.Fragment>
   );
 }
