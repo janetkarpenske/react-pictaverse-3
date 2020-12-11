@@ -1,14 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import NavBar from "./NavBar";
-
+import PostControl from "./PostControl"; 
 
 function App(){
   return ( 
     <React.Fragment>
-      <NavBar />
-      <div className="container">
       <Header />
+      <div className="container-fluid">
+        <PostControl />
       </div>
     </React.Fragment>
   );
