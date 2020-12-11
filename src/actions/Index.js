@@ -1,7 +1,7 @@
 import * as c from './actionTypes';
 
 export const deletePost = id => ({
-  type: 'DELETE_KEG',
+  type: 'DELETE_POST',
   id
 });
 export const toggleForm = () => ({

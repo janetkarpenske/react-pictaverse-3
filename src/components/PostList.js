@@ -6,7 +6,6 @@ function PostList(props){
   return (
     <React.Fragment>
       <h2 className="center-align">Your Feed</h2>
-      <hr/>
       {Object.values(props.postList).map((post) =>
         <Post
         whenPostIsClicked = { props.onPostSelection }

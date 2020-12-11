@@ -5,7 +5,7 @@ import EditPostForm from './EditPostForm';
 import PostDetails from './PostDetails';
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
-import * as a from './../actions';
+import * as a from '../actions';
 
 class PostControl extends React.Component {
   constructor(props) {
@@ -34,22 +34,23 @@ handleSelectingPost = (id) => {
   dispatch(action);
 }
 handleDeletingPost = (id) => {
+  console.log("Delete post reached");
   const { dispatch } = this.props;
     const action1 = a.deletePost(id);
     dispatch(action1);
     const action2 = a.setPostNull();
     dispatch(action2);
 }
-handleDislikingPost = (id) => {
-  const { dispatch } = this.props;
-  const action = a.dislikePost(id);
-  dispatch(action);
-}
-handleLikingPost = (id) => {
-  const { dispatch } = this.props;
-  const action = a.likePost(id);
-  dispatch(action);
-}
+// handleDislikingPost = (id) => {
+//   const { dispatch } = this.props;
+//   const action = a.dislikePost(id);
+//   dispatch(action);
+// }
+// handleLikingPost = (id) => {
+//   const { dispatch } = this.props;
+//   const action = a.likePost(id);
+//   dispatch(action);
+// }
 
 handleEditClick = () => {
   const { dispatch } = this.props;
