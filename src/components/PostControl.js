@@ -21,10 +21,12 @@ handleClick = () => {
   dispatch(action);
   }
 }
-handleAddingNewTicketToList = () => {
+handleAddingNewPostToList = (newPost) => {
   const { dispatch } = this.props;
-  const action = a.toggleForm();
+  const action = a.addPost(newPost);
   dispatch(action);
+  const action2 = a.toggleForm();
+  dispatch(action2);
 }
 handleSelectingPost = (id) => {
   const { dispatch } = this.props;
