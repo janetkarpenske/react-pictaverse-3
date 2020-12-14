@@ -41,16 +41,23 @@ handleDeletingPost = (id) => {
     const action2 = a.setPostNull();
     dispatch(action2);
 }
-// handleDislikingPost = (id) => {
-//   const { dispatch } = this.props;
-//   const action = a.dislikePost(id);
-//   dispatch(action);
-// }
-// handleLikingPost = (id) => {
-//   const { dispatch } = this.props;
-//   const action = a.likePost(id);
-//   dispatch(action);
-// }
+
+
+
+
+handleDislikingPost = (id) => {
+  const { dispatch } = this.props;
+  const action = a.dislikePost(id);
+  dispatch(action);
+}
+handleLikingPost = (id) => {
+  const { dispatch } = this.props;
+  const action = a.likePost(id);
+  dispatch(action);
+}
+
+
+
 
 handleEditClick = () => {
   const { dispatch } = this.props;
@@ -77,7 +84,7 @@ render() {
   }
   else if (this.props.selectedPost != null) {
     console.log("CORRECT else statement reached");
-    currentlyVisibleState = <PostDetails post = {this.props.selectedPost} onClickingDislike= {this.handleDislikingPost} onClickingDelete = {this.handleDeletingPost} onClickingEdit = {this.handleEditClick}/>
+    currentlyVisibleState = <PostDetails post = {this.props.selectedPost} onClickingDislike= {this.handleDislikingPost} onClickingLike= {this.handleLikingPost} onClickingDelete = {this.handleDeletingPost} onClickingEdit = {this.handleEditClick}/>
     buttonText = "Back to List";
   }
   else if (this.props.formVisibleOnPage) {

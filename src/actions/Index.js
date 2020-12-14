@@ -22,10 +22,15 @@ export const addPost = (post) => {
     id: id
   }
 }
-export const addDislike = id => ({
+export const dislikePost = id => ({
   type: 'ADD_DISLIKE',
   id
 });
+export const likePost = id => ({
+  type: 'ADD_LIKE',
+  id
+});
+
 export const selectPost = (id,postList) => {
   return {
     type: c.SELECT_POST,

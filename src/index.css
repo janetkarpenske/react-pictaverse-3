@@ -5,7 +5,7 @@ body, html {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   background-color: rgb(21, 28, 32);
-  background-image: url("./img/fern.jpg");
+  background-image: url("./img/dark-mtns.jpg");
   background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -30,3 +30,40 @@ h1 {
 .green {
   color: greenyellow;
 }
+li {
+  
+  list-style: none;
+  display: inline;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 25px;
+  
+}
+
+.about-me-bg {
+  background-color: rgb(27, 37, 41);
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-top: 58%;
+  }
+  .about-me-txt {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: rgb(27, 37, 41);
+    color: white;
+  }
+  #aboutHead {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  a {
+    color: greenyellow;
+  }
+  a:hover {
+    color: rgb(205, 245, 145);
+    text-shadow: 3px 3px 8px greenyellow;
+    text-decoration: none;
+  }
