@@ -16,7 +16,7 @@
 3. To view on server run command "npm run start".
 
 ## React Component Diagram
-<img src="./src/img/componentDiagram.png" />
+<img src="./src/img/component-diagram-capstone.jpg" />
 
 ## Known Bugs
 No Known Bugs
