@@ -5,9 +5,10 @@ function Post (props) {
   return (
     <React.Fragment>
       <div className="hoverItem" onClick = {() => props.whenPostIsClicked(props.id)}> 
-        <h4><strong>{props.brand}'s' {props.name}</strong> - ${props.price}</h4>
-        <h5>Alcohol Content: {props.alcoholContent}% - Amount Left: {props.amountLeft} Pints</h5> 
-        
+        <h4><strong>{props.name}</strong> - {props.location}</h4>
+        <p>Summary: {props.summary}</p>
+        <h5>Dislikes: {props.dislikes} - Likes: {props.likes}</h5> 
+        <img src="{props.image}"></img>
       </div>
       <hr/>
     </React.Fragment>
@@ -16,10 +17,11 @@ function Post (props) {
 
 Post.propTypes = {
   name: PropTypes.string,
-  brand: PropTypes.string,
-  price: PropTypes.string,
-  alcoholContent: PropTypes.string,
-  amountLeft: PropTypes.number,
+  location: PropTypes.string,
+  summary: PropTypes.string,
+  image: PropTypes.string,
+  likes: PropTypes.number,
+  dislikes: PropTypes.number,
   id: PropTypes.string, //why is this a string and not a number?
   whenPostIsClicked: PropTypes.func
 };

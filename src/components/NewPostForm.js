@@ -7,7 +7,7 @@ function NewPostForm (props) {
 
   function handlePostFormSubmission(event) {
     event.preventDefault();
-    props.onNewPostCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, alcoholContent: event.target.alcoholContent.value, amountLeft: 124, id: v4()});
+    props.onNewPostCreation({name: event.target.name.value, location: event.target.location.value, summary: event.target.summary.value, image: event.target.image.value, likes: 0, dislikes: 0, id: v4()});
   }
 
   return (

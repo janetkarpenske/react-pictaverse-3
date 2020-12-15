@@ -11,14 +11,15 @@ export const toggleEdit = () => ({
   type: 'TOGGLE_EDIT'
 });
 export const addPost = (post) => {
-  const { name, brand, price, alcoholContent, amountLeft, id } = post;
+  const { name, location, summary, image, likes, dislikes, id } = post;
   return {
     type: 'ADD_POST',
     name: name,
-    brand: brand,
-    price: price,
-    alcoholContent: alcoholContent,
-    amountLeft: amountLeft,
+    location: location,
+    summary: summary,
+    image: image,
+    likes: likes,
+    dislikes: dislikes,
     id: id
   }
 }

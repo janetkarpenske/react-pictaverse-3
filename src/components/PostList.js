@@ -10,10 +10,11 @@ function PostList(props){
         <Post
         whenPostIsClicked = { props.onPostSelection }
         name={post.name}
-        brand={post.brand}
-        price={post.price}
-        alcoholContent={post.alcoholContent}
-        amountLeft={post.amountLeft}
+        location={post.location}
+        summary={post.summary}
+        image={post.image}
+        likes={post.likes}
+        dislikes={post.dislikes}
         id={post.id}
         key={post.id}/>
       )}

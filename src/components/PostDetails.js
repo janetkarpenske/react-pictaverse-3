@@ -6,14 +6,14 @@ function PostDetails(props) {
 
   return (
     <React.Fragment>
-      <h3><strong>{post.brand}'s {post.name}</strong></h3>
-      <h4>${post.price}</h4>
-      <h4><em>Alcohol Content </em>{post.alcoholContent}%</h4>
-      <h4>Amount Left (in pints): {post.amountLeft}</h4>
-      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDislike(post.id) }>Dislike</button>
-      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingLike(post.id) }>Like</button>
-      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button>
-      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingEdit(post.id) }>Edit Post</button>
+      <h3><strong>{post.name} {post.location}</strong></h3>
+      <h4>{post.summary}</h4>
+      <img src="{post.image}"></img>
+      <h4>Dislikes: {post.dislikes}: Likes: {post.likes}</h4>
+      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDislike(post.id) }>Dislike</button><br/>
+      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingLike(post.id) }>Like</button><br/>
+      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button><br/>
+      <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingEdit(post.id) }>Edit Post</button><br/>
     </React.Fragment>
   );
 }
