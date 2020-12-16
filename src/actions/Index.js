@@ -10,19 +10,19 @@ export const toggleForm = () => ({
 export const toggleEdit = () => ({
   type: 'TOGGLE_EDIT'
 });
-export const addPost = (post) => {
-  const { name, location, summary, image, likes, dislikes, id } = post;
-  return {
-    type: 'ADD_POST',
-    name: name,
-    location: location,
-    summary: summary,
-    image: image,
-    likes: likes,
-    dislikes: dislikes,
-    id: id
-  }
-}
+// export const addPost = (post) => {
+//   const { name, location, summary, image, likes, dislikes, id } = post;
+//   return {
+//     type: 'ADD_POST',
+//     name: name,
+//     location: location,
+//     summary: summary,
+//     image: image,
+//     likes: likes,
+//     dislikes: dislikes,
+//     id: id
+//   }
+// }
 export const dislikePost = id => ({
   type: 'ADD_DISLIKE',
   id
@@ -32,11 +32,10 @@ export const likePost = id => ({
   id
 });
 
-export const selectPost = (id,postList) => {
+export const selectPost = (firestorePost) => {
   return {
     type: c.SELECT_POST,
-    id: id,
-    postList: postList
+    post: firestorePost
   };
 };
 export const setPostNull = () => {

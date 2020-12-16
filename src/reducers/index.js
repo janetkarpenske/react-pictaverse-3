@@ -5,7 +5,7 @@ import postSelectReducer from './post-select-reducer';
 import HomepageVisibleReducer from './homepage-visible-reducer';
 import PostsVisibleReducer from './posts-visible-reducer';
 import { combineReducers } from 'redux';
-// import { firestoreReducer } from 'redux-firestore';
+import { firestoreReducer } from 'redux-firestore';
 
 const rootReducer = combineReducers({
   formVisibleOnPage: formVisibleReducer,
@@ -13,8 +13,8 @@ const rootReducer = combineReducers({
   editing: editingReducer,
   selectedPost: postSelectReducer,
   homepageVisible: HomepageVisibleReducer,
-  postsVisible: PostsVisibleReducer
-  // firestore: firestoreReducer
+  postsVisible: PostsVisibleReducer,
+  firestore: firestoreReducer
 });
 
 export default rootReducer;

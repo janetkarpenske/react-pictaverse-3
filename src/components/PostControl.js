@@ -7,6 +7,7 @@ import Homepage from "./Homepage";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import * as a from '../actions';
+import { withFirestore } from 'react-redux-firebase'
 
 class PostControl extends React.Component {
   constructor(props) {
@@ -28,17 +29,30 @@ handleClick = () => {
   dispatch(action);
   }
 }
-handleAddingNewPostToList = (newPost) => {
+
+handleAddingNewPostToList = () => {
   const { dispatch } = this.props;
-  const action = a.addPost(newPost);
-  dispatch(action);
   const action2 = a.toggleForm();
   dispatch(action2);
 }
+
 handleSelectingPost = (id) => {
-  const { dispatch } = this.props;
-  const action = a.selectPost(id, this.props.masterPostList)
-  dispatch(action);
+  this.props.firestore.get({collection: 'posts', doc: id}).then((post) => {
+    const firestorePost = {
+      name: post.get("name"),
+      location: post.get("location"),
+      summary: post.get("summary"),
+      image: post.get("image"),
+      likes: post.get("likes"),
+      dislikes: post.get("dislikes"),
+      id: post.id
+    }
+    //this.setState({selectedPost: firestorePost });
+    const { dispatch } = this.props;
+    const action = a.selectPost(firestorePost);
+    dispatch(action);
+  });
+
 }
 handleDeletingPost = (id) => {
   console.log("Delete post reached");
@@ -72,15 +86,15 @@ handleEditClick = () => {
   dispatch(action);
 }
 
-handleEditingPostInList = (postToEdit) => {
-  const { dispatch } = this.props;
-    const action = a.addPost(postToEdit);
-    dispatch(action);
-    const action2 = a.toggleEdit();
-    dispatch(action2);
-    const action3 = a.setPostNull();
-    dispatch(action3);
-}
+// handleEditingPostInList = (postToEdit) => {
+//   const { dispatch } = this.props;
+//     const action = a.addPost(postToEdit);
+//     dispatch(action);
+//     const action2 = a.toggleEdit();
+//     dispatch(action2);
+//     const action3 = a.setPostNull();
+//     dispatch(action3);
+// }
 
 render() {
   let currentlyVisibleState = null;
@@ -99,7 +113,7 @@ render() {
     buttonText = "Back To List"
   }
   else if (this.props.postsVisible) {
-    currentlyVisibleState =  <PostList postList={this.props.masterPostList} onPostSelection={this.handleSelectingPost}/>;
+    currentlyVisibleState =  <PostList onPostSelection={this.handleSelectingPost}/>;
     buttonText = "Create New Post";
   }
   else {
@@ -125,7 +139,7 @@ PostControl.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    masterPostList: state.masterPostList,
+    //masterPostList: state.masterPostList,
     formVisibleOnPage: state.formVisibleOnPage,
     editing: state.editing,
     selectedPost: state.selectedPost,
@@ -135,4 +149,4 @@ const mapStateToProps = state => {
 }
 PostControl = connect(mapStateToProps)(PostControl);
 
-export default PostControl;
+export default withFirestore(PostControl);
