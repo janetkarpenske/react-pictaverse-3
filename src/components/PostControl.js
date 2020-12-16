@@ -3,6 +3,7 @@ import PostList from './PostList';
 import NewPostForm from './NewPostForm';
 import EditPostForm from './EditPostForm';
 import PostDetails from './PostDetails';
+import Homepage from "./Homepage";
 import PropTypes from "prop-types";
 import { connect } from 'react-redux';
 import * as a from '../actions';
@@ -13,7 +14,13 @@ class PostControl extends React.Component {
 }
 handleClick = () => {
   const { dispatch } = this.props;
-  if (this.props.selectedPost != null) {
+  if (this.props.homepageVisible) {
+    const action1 = a.toggleHomepageVisible();
+    dispatch(action1);
+    const action2 = a.togglePostsVisible();
+    dispatch(action2);
+  }
+  else if (this.props.selectedPost != null) {
     const action1 = a.setPostNull();
     dispatch(action1);
   } else {
@@ -91,9 +98,15 @@ render() {
     currentlyVisibleState = <NewPostForm onNewPostCreation={this.handleAddingNewPostToList} />
     buttonText = "Back To List"
   }
-  else {
+  else if (this.props.postsVisible) {
     currentlyVisibleState =  <PostList postList={this.props.masterPostList} onPostSelection={this.handleSelectingPost}/>;
     buttonText = "Create New Post";
+  }
+  else {
+    // currentlyVisibleState =  <PostList postList={this.props.masterPostList} onPostSelection={this.handleSelectingPost}/>;
+    // buttonText = "Create New Post";
+    currentlyVisibleState = <Homepage />
+    buttonText = "Enter site";
   }
   return (
     <React.Fragment>
@@ -115,7 +128,9 @@ const mapStateToProps = state => {
     masterPostList: state.masterPostList,
     formVisibleOnPage: state.formVisibleOnPage,
     editing: state.editing,
-    selectedPost: state.selectedPost
+    selectedPost: state.selectedPost,
+    homepageVisible: state.homepageVisible,
+    postsVisible: state.postsVisible
   }
 }
 PostControl = connect(mapStateToProps)(PostControl);

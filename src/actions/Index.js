@@ -45,4 +45,10 @@ export const setPostNull = () => {
   };
 };
 
+export const toggleHomepageVisible = () => ({
+  type: c.HOMEPAGE_VISIBLE
+});
 
+export const togglePostsVisible = () => ({
+  type: c.POSTS_VISIBLE
+});

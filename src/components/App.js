@@ -1,11 +1,11 @@
 import React from "react";
-import Homepage from "./Homepage";
+//import Homepage from "./Homepage";
 import PostControl from "./PostControl"; 
 
 function App(){
   return ( 
     <React.Fragment>
-      <Homepage />
+      {/* <Homepage /> */}
       <div className="container-fluid">
         <PostControl />
       </div>
