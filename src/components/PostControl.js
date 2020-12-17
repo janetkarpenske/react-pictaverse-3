@@ -47,10 +47,10 @@ handleSelectingPost = (id) => {
       dislikes: post.get("dislikes"),
       id: post.id
     }
-    //this.setState({selectedPost: firestorePost });
-    const { dispatch } = this.props;
-    const action = a.selectPost(firestorePost);
-    dispatch(action);
+    this.setState({selectedPost: firestorePost });
+    // const { dispatch } = this.props;
+    // const action = a.selectPost(firestorePost);
+    // dispatch(action);
   });
 
 }

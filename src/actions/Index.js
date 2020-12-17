@@ -32,10 +32,11 @@ export const likePost = id => ({
   id
 });
 
-export const selectPost = (firestorePost) => {
+export const selectPost = (id, postList) => {
   return {
     type: c.SELECT_POST,
-    post: firestorePost
+    id: id,
+    postList: postList
   };
 };
 export const setPostNull = () => {
