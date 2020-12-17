@@ -55,7 +55,7 @@ handleSelectingPost = (id) => {
 
 }
 handleDeletingPost = (id) => {
-  this.props.firestore.delete({collection: 'tickets', doc: id});
+  this.props.firestore.delete({collection: 'posts', doc: id});
   console.log("Delete post reached");
   const { dispatch } = this.props;
     const action = a.setPostNull();
@@ -85,15 +85,13 @@ handleEditClick = () => {
   dispatch(action);
 }
 
-// handleEditingPostInList = (postToEdit) => {
-//   const { dispatch } = this.props;
-//     const action = a.addPost(postToEdit);
-//     dispatch(action);
-//     const action2 = a.toggleEdit();
-//     dispatch(action2);
-//     const action3 = a.setPostNull();
-//     dispatch(action3);
-// }
+handleEditingPostInList = () => {
+  const { dispatch } = this.props;
+    const action2 = a.toggleEdit();
+    dispatch(action2);
+    const action3 = a.setPostNull();
+    dispatch(action3);
+}
 
 render() {
   let currentlyVisibleState = null;
