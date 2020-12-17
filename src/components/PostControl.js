@@ -47,20 +47,19 @@ handleSelectingPost = (id) => {
       dislikes: post.get("dislikes"),
       id: post.id
     }
-    this.setState({selectedPost: firestorePost });
-    // const { dispatch } = this.props;
-    // const action = a.selectPost(firestorePost);
-    // dispatch(action);
+    //this.setState({selectedPost: firestorePost });
+    const { dispatch } = this.props;
+    const action = a.selectPost(firestorePost);
+    dispatch(action);
   });
 
 }
 handleDeletingPost = (id) => {
+  this.props.firestore.delete({collection: 'tickets', doc: id});
   console.log("Delete post reached");
   const { dispatch } = this.props;
-    const action1 = a.deletePost(id);
-    dispatch(action1);
-    const action2 = a.setPostNull();
-    dispatch(action2);
+    const action = a.setPostNull();
+    dispatch(action);
 }
 
 

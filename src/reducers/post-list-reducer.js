@@ -4,18 +4,7 @@ export default (state = {}, action) => {
   const { id } = action;
   let tempState;
   switch (action.type) {
-    // case c.ADD_POST:
-    //   return Object.assign({}, state, {
-    //     [id]: {
-    //       name: name,
-    //       location: location,
-    //       summary: summary,
-    //       image: image,
-    //       likes: likes,
-    //       dislikes: dislikes,
-    //       id: id
-    //     }
-    //   })
+
     case c.DELETE_POST:
       tempState = { ...state };
       delete tempState[id];
