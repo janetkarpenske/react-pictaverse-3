@@ -27,9 +27,8 @@ export const dislikePost = id => ({
   type: 'ADD_DISLIKE',
   id
 });
-export const likePost = id => ({
+export const likePost = () => ({
   type: 'ADD_LIKE',
-  id
 });
 
 export const selectPost = (firestorePost) => {

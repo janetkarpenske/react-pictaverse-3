@@ -22,10 +22,10 @@ export default (state = {}, action) => {
 
       case c.ADD_LIKE:
         console.log("Add like reducer reached");
-        tempState = {...state};
-        let newNumberOfLikes = tempState[id].likes + 1;
-        tempState[id].likes = newNumberOfLikes;
-        return tempState;
+        // tempState = {...state};
+        // let newNumberOfLikes = tempState[id].likes + 1;
+        // tempState[id].likes = newNumberOfLikes;
+        // return tempState;
 
     default:
       return state;

@@ -22,11 +22,14 @@ handleClick = () => {
     const action2 = a.togglePostsVisible();
     dispatch(action2);
   }
-  else if (this.props.selectedPost != null) {
+  else if (this.props.selectedPost != null && this.props.editing) {
     const action1 = a.setPostNull();
     dispatch(action1);
     const action2 = a.toggleEdit();
     dispatch(action2);
+  } else if (this.props.selectedPost != null) {
+    const action1 = a.setPostNull();
+    dispatch(action1);
   } else {
   const action = a.toggleForm();
   dispatch(action);
@@ -92,6 +95,9 @@ handleLikingPost = (id) => {
     }
     return this.props.firestore.update({collection: 'posts', doc: post.id }, firestorePostToUpdate)
   });
+  // const { dispatch } = this.props;
+  // const action = a.likePost();
+  // dispatch(action);
 }
 
 
