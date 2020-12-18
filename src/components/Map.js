@@ -12,7 +12,7 @@ function Map() {
   ]);
 
   const posts = useSelector(state => state.firestore.ordered.posts);
-  console.log("MAPS Posts: " + posts[0].name);
+  //console.log("MAPS Posts: " + posts[0].name);
 
   return (
     <GoogleMap 
@@ -20,8 +20,8 @@ function Map() {
     defaultCenter={{ lat: 45.6257, lng: -122.6761}} >
       {posts.map((post) => (
         <Marker key={post.id} position={{
-          lat: post.latitude,
-          lng: post.longitude}} />
+          lat: post.lat,
+          lng: post.lng}} />
       ))}
 
     </GoogleMap>

@@ -17,6 +17,8 @@ function NewPostForm (props) {
         location: event.target.location.value, 
         summary: event.target.summary.value,
         image: event.target.image.value,
+        lat: parseFloat(event.target.lat.value),
+        lng: parseFloat(event.target.lng.value),
         likes: 0,
         dislikes: 0,
         timeOpen: firestore.FieldValue.serverTimestamp()

@@ -49,6 +49,8 @@ handleSelectingPost = (id) => {
       location: post.get("location"),
       summary: post.get("summary"),
       image: post.get("image"),
+      lat: post.get("lat"),
+      lng: post.get("lng"),
       likes: post.get("likes"),
       dislikes: post.get("dislikes"),
       id: post.id

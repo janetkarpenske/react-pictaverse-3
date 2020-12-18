@@ -12,12 +12,9 @@ export default (state = {}, action) => {
 
 
     case c.ADD_DISLIKE:
-      console.log("Add dislike reducer reached");
       tempState = {...state};
       let newNumOfDislikesAfterDislike = tempState[id].dislikes + 1;
-      console.log("New Num of Drinks: " + newNumOfDislikesAfterDislike);
       tempState[id].dislikes = newNumOfDislikesAfterDislike;
-      console.log("Temp State: " + tempState);
       return tempState;
 
       case c.ADD_LIKE:
