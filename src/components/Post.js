@@ -3,13 +3,32 @@ import PropTypes from 'prop-types';
 
 function Post (props) {
   return (
+    // <React.Fragment>
+    //   <div onClick = {() => props.whenPostIsClicked(props.id)}> 
+    //   <div className="flip-card">
+    //     <div className="flip-card-inner">
+    //       <div className="flip-card-front">
+    //         <img className="postImg" src={props.image}></img>
+    //       </div>
+    //     {/* <div onClick = {() => props.whenPostIsClicked(props.id)}>  */}
+    //       <h4><strong>{props.name}</strong> - {props.location}</h4>
+    //       <p>Summary: {props.summary}</p>
+    //       <h5>Dislikes: {props.dislikes} - Likes: {props.likes}</h5> 
+    //       {/* <img src={props.image}></img> */}
+    //     {/* </div> */}
+    //     </div>
+    //   </div>
+    //   </div>
+    //   <hr/>
+    // </React.Fragment>
     <React.Fragment>
-      <div onClick = {() => props.whenPostIsClicked(props.id)}> 
-      <div className="flip-card">
-        <div className="flip-card-inner">
-          <div className="flip-card-front">
+      <div className="postHover" onClick = {() => props.whenPostIsClicked(props.id)}> 
+
+        <div className="row">
+          <div className="col-md-8">
             <img className="postImg" src={props.image}></img>
-          </div>
+            </div>
+            <div className="col-md-4">
         {/* <div onClick = {() => props.whenPostIsClicked(props.id)}>  */}
           <h4><strong>{props.name}</strong> - {props.location}</h4>
           <p>Summary: {props.summary}</p>
@@ -17,7 +36,8 @@ function Post (props) {
           {/* <img src={props.image}></img> */}
         {/* </div> */}
         </div>
-      </div>
+        </div>
+
       </div>
       <hr/>
     </React.Fragment>

@@ -30,6 +30,7 @@ h1 {
 }
 .green {
   color: greenyellow;
+  text-shadow: 4px 4px 5px greenyellow;
 }
 li {
   
@@ -94,8 +95,6 @@ li {
     }
 
 
-
-
   /* .flip-card {
     background-color: transparent;
     width: 400px;
@@ -141,7 +140,12 @@ li {
     transform: rotateY(180deg);
   } */
   .postImg {
-    width: 400px;
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .detailImg {
+    width: 700px;
     height: 500px;
     object-fit: cover;
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import PropTypes from 'prop-types';
-//import PostStyling from './../styling/posts.css';
+import PostStyling from './../styling/posts.css';
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
 
@@ -15,7 +15,9 @@ function PostList(props){
   if (isLoaded(posts)) {
     return (
       <React.Fragment>
-        <h2 className="center-align">Your Feed</h2>
+        
+        <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2>
+        <div className="container">
         {posts.map((post) => {
         
           return <Post
@@ -29,6 +31,7 @@ function PostList(props){
           id={post.id}
           key={post.id}/>
         })}
+        </div>
       </React.Fragment>
     );
   } else {

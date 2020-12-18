@@ -9,7 +9,7 @@ return (
       <input className="form-control" type='text' name='location' placeholder='Location' required/><br/>
       <div className="row">
         <div className="col-md-6">
-          <input className="form-control" type='text' name='summary' placeholder='Description' required/><br/>
+          <textarea className="form-control" type='text' name='summary' placeholder='Description' required/><br/>
         </div>
         <div className="col-md-6">
         <input className="form-control" type='text' name='image' placeholder='Image' required/><br/>

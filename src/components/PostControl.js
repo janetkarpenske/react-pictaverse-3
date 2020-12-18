@@ -14,6 +14,7 @@ class PostControl extends React.Component {
     super(props);
 }
 handleClick = () => {
+  console.log("handle click reached");
   const { dispatch } = this.props;
   if (this.props.homepageVisible) {
     const action1 = a.toggleHomepageVisible();
@@ -24,6 +25,8 @@ handleClick = () => {
   else if (this.props.selectedPost != null) {
     const action1 = a.setPostNull();
     dispatch(action1);
+    const action2 = a.toggleEdit();
+    dispatch(action2);
   } else {
   const action = a.toggleForm();
   dispatch(action);
@@ -66,14 +69,29 @@ handleDeletingPost = (id) => {
 
 
 handleDislikingPost = (id) => {
-  const { dispatch } = this.props;
-  const action = a.dislikePost(id);
-  dispatch(action);
+  // const { dispatch } = this.props;
+  // const action = a.dislikePost(id);
+  // dispatch(action);
+  this.props.firestore.get({collection: 'posts', doc: id}).then((post) => {
+    const firestorePostToUpdate = {
+      dislikes: post.get("dislikes") + 1,
+      id: post.id
+    }
+    return this.props.firestore.update({collection: 'posts', doc: post.id }, firestorePostToUpdate)
+  });
 }
 handleLikingPost = (id) => {
-  const { dispatch } = this.props;
-  const action = a.likePost(id);
-  dispatch(action);
+  console.log("like post reached");
+  // const { dispatch } = this.props;
+  // const action = a.likePost(id);
+  // dispatch(action);
+  this.props.firestore.get({collection: 'posts', doc: id}).then((post) => {
+    const firestorePostToUpdate = {
+      likes: post.get("likes") + 1,
+      id: post.id
+    }
+    return this.props.firestore.update({collection: 'posts', doc: post.id }, firestorePostToUpdate)
+  });
 }
 
 
