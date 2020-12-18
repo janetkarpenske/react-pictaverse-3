@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import PostStyling from './../styling/posts.css';
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
-
 import WrappedMap from './Map';
 
 function PostList(props){
@@ -21,7 +20,7 @@ function PostList(props){
         <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2>
 
         <div style={{width: '95vw', height: '80vh'}}>
-          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`} 
+          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY_TWO}`} 
           //height tells it to be 100% of whatever container it is in
           loadingElement={<div style={{height: "100%"}}></div>}
           containerElement={<div style={{height: "600px"}}></div>}
