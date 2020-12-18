@@ -1,6 +1,6 @@
 # Pictaverse
 
-#### A social media site created with React. Users are able to create picture-based mini blog-posts that serve as a travel guide for other users. Created & Updated on 12/11/2020.
+#### A social media site created with React. Users are able to create picture-based mini blog-posts that serve as a travel guide for other users. Created on 12/11/2020, Updated on 12/18/2020.
 
 #### By: Janet Karpenske
 
