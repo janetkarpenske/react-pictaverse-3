@@ -20,12 +20,12 @@ function PostList(props){
         
         <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2>
 
-        <div>
-          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`} 
+        <div style={{width: '95vw', height: '80vh'}}>
+          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`} 
           //height tells it to be 100% of whatever container it is in
-          loadingElement={<div style={{height: "50%"}}></div>}
-          containerElement={<div style={{height: "50%"}}></div>}
-          mapElement={<div style={{height: "50%"}}></div>}
+          loadingElement={<div style={{height: "100%"}}></div>}
+          containerElement={<div style={{height: "600px"}}></div>}
+          mapElement={<div style={{height: "100%"}}></div>}
           />
         </div>
 
