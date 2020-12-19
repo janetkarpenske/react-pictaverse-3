@@ -1,5 +1,5 @@
 //https://snazzymaps.com/style/229/simple-and-light
-[
+export default [
   {
       "featureType": "administrative",
       "elementType": "all",

@@ -27,7 +27,7 @@ return (
         <input className="form-control" type='text' name='lng' placeholder='Longitude' required/><br/>
         </div>
       </div>
-      <button className="btn btn-dark btn-md" type='submit'>{props.buttonText}</button><br/><br/>
+      <button className="btn btn-light btn-md" type='submit'>{props.buttonText}</button><br/><br/>
     </form>
     </div>
     </div>

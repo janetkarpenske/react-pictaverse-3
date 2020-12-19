@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker } from 'react-google-maps';
+import mapStyle from './../styling/mapStyle';
 
 //tried importing next two lines to be able to access firestore posts
 import { useSelector } from 'react-redux'
@@ -16,12 +17,20 @@ function Map() {
 
   return (
     <GoogleMap 
-    defaultZoom={12} 
-    defaultCenter={{ lat: 45.6257, lng: -122.6761}} >
+    defaultZoom={11} 
+    defaultCenter={{ lat: 45.6257, lng: -122.6761}}
+    defaultOptions={{styles: mapStyle}} >
       {posts.map((post) => (
-        <Marker key={post.id} position={{
+        <Marker key={post.id} 
+        position={{
           lat: post.lat,
-          lng: post.lng}} />
+          lng: post.lng
+        }} 
+        // icon={{
+        //   url: "#.svg",
+        //   scaledSize: new window.google.maps.Size(25, 25)
+        // }}
+        />
       ))}
 
     </GoogleMap>
