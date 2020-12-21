@@ -12,6 +12,7 @@ body, html {
 }
 .whiteBackground {
   background-color: rgb(255, 255, 255);
+  padding-bottom: 80px;
 }
 .heroText {
 text-align: center;
@@ -108,13 +109,13 @@ li {
   font-weight: bolder;
 }
 .detailPage h3{
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .detailPage {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(224, 224, 224);
   color: rgb(0, 0, 0);
   padding: 50px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
   .postImg {
     width: 600px;
@@ -163,7 +164,7 @@ a:hover {
   color: rgb(0, 0, 0);
   font-weight: bolder;
 }
-.detailPage h3{
+/* .detailPage h3{
   padding-top: 40px;
 }
 .detailPage {
@@ -171,7 +172,7 @@ a:hover {
   color: rgb(0, 0, 0);
   padding: 50px;
   border-radius: 5px;
-}
+} */
   .postImg {
     width: 600px;
     height: 400px;
@@ -183,8 +184,8 @@ a:hover {
     object-fit: cover;
   }
   .feedHeader {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 60px;
     letter-spacing: 70px;
     text-shadow: 3px 3px 6px rgb(226, 226, 226);
