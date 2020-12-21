@@ -1,7 +1,6 @@
 import React from 'react';
 import Post from './Post';
 import PropTypes from 'prop-types';
-import './../styling/posts.css';
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
 import WrappedMap from './Map';
@@ -16,7 +15,7 @@ function PostList(props){
   if (isLoaded(posts)) {
     return (
       <React.Fragment>
-        
+        <div className="whiteBackground">
         <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2>
 
         <div style={{width: '95vw', height: '80vh', marginLeft: '30px'}}>
@@ -45,12 +44,15 @@ function PostList(props){
           key={post.id}/>
         })}
         </div>
+        </div>
       </React.Fragment>
     );
   } else {
     return (
       <React.Fragment>
+        <div className="whiteBackground">
         <h3>Loading Pictaverse...</h3>
+        </div>
       </React.Fragment>
     )
   }
