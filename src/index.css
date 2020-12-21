@@ -4,8 +4,8 @@ body, html {
   background-color: rgb(21, 28, 32);
   background-image: url("./img/dark-mtns.jpg");
   background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
@@ -16,7 +16,7 @@ background-size: cover;
 .heroText {
 text-align: center;
 position: absolute;
-top: 50%;
+top: 58%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: rgb(255, 255, 255);
@@ -31,7 +31,6 @@ h1 {
 } 
 .green {
   color: greenyellow;
-  text-shadow: 4px 4px 5px greenyellow;
 }
 li {
   list-style: none;
@@ -60,8 +59,17 @@ li {
   #aboutHead {
     padding-top: 60px;
     padding-bottom: 30px;
+    
   }
-
+.newPostButton {
+  margin-left: 42%;
+  margin-top: -420px;
+  padding-left: 100px;
+    padding-right: 100px;
+}
+.listContainer {
+  margin-top: -170px;
+}
   .about-api-bg {
     background-color: rgb(32, 33, 34);
     height: 45%;

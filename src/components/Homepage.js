@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 //import './../styling/homepageStyle.css';
 
-function Homepage () {
+function Homepage (props) {
+  // const { onMainCLick } = props;
   return (
     <React.Fragment>
       <div className="mainPicture">
@@ -9,6 +11,8 @@ function Homepage () {
           <div className="center-align">
             <h1 className="title">picta<span className="green">v</span>erse</h1>
             <h3 className="subHead">The photography-driven travel guide.</h3>
+            <br/><br/><br/><br/><br/><br/>
+            <button className="btn btn-dark btn-lg" onClick={ () => props.onMainClick() }>Enter Site</button>
             {/* <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             <h6>Janet M .Karpenske</h6> */}
           </div>
@@ -44,5 +48,7 @@ function Homepage () {
     </React.Fragment>
   );
 }
-
+Homepage.propTypes = {
+  onMainClick: PropTypes.func
+};
 export default Homepage;

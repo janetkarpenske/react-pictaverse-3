@@ -6,6 +6,7 @@ function PostDetails(props) {
 
   return (
     <React.Fragment>
+      <div className="whiteBackground">
       <div className="center-align detailPage container">
         <h3><strong>{post.name} {post.location}</strong></h3><br/><br/>
         
@@ -16,6 +17,7 @@ function PostDetails(props) {
         <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingLike(post.id) }>Like</button>
         <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button>
         <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingEdit(post.id) }>Edit Post</button>
+      </div>
       </div>
     </React.Fragment>
   );

@@ -136,13 +136,11 @@ render() {
     buttonText = "Back To List"
   }
   else if (this.props.postsVisible) {
-    currentlyVisibleState =  <PostList onPostSelection={this.handleSelectingPost}/>;
+    currentlyVisibleState =  <PostList onPostSelection={this.handleSelectingPost} onMainClick={this.handleClick}/>;
     buttonText = "Create New Post";
   }
   else {
-    // currentlyVisibleState =  <PostList postList={this.props.masterPostList} onPostSelection={this.handleSelectingPost}/>;
-    // buttonText = "Create New Post";
-    currentlyVisibleState = <Homepage />
+    currentlyVisibleState = <Homepage onMainClick={this.handleClick}/>
     buttonText = "Enter site";
   }
   return (
