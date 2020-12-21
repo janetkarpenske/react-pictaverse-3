@@ -19,7 +19,8 @@ function PostList(props){
         <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2>
 
         <div style={{width: '95vw', height: '80vh', marginLeft: '30px'}}>
-          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`} //&key=${process.env.REACT_APP_GOOGLE_KEY_TWO}
+          <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`} 
+          //&key=${process.env.REACT_APP_GOOGLE_KEY_TWO}
 
           loadingElement={<div style={{height: "100%"}}></div>}
           containerElement={<div style={{height: "600px"}}></div>}
@@ -43,7 +44,7 @@ function PostList(props){
           dislikes={post.dislikes}
           id={post.id}
           key={post.id}/>
-        })}
+        })} 
         </div>
         </div>
       </React.Fragment>

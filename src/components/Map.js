@@ -19,9 +19,10 @@ function Map() {
   return (
     <React.Fragment>
     <GoogleMap 
-    defaultZoom={11} 
-    defaultCenter={{ lat: 45.6257, lng: -122.6761}}
-    defaultOptions={{styles: mapStyle}} >
+    defaultZoom={3} 
+    defaultCenter={{ lat: 45.6257, lng: -8.6761}}
+    // defaultOptions={{styles: mapStyle}} 
+    >
       {posts.map((post) => (
         <React.Fragment>
         <Marker key={post.id} 
