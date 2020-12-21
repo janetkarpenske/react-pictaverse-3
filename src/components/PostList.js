@@ -21,7 +21,7 @@ function PostList(props){
 
         <div style={{width: '95vw', height: '80vh', marginLeft: '30px'}}>
           <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`} //&key=${process.env.REACT_APP_GOOGLE_KEY_TWO}
-          //height tells it to be 100% of whatever container it is in
+
           loadingElement={<div style={{height: "100%"}}></div>}
           containerElement={<div style={{height: "600px"}}></div>}
           mapElement={<div style={{height: "100%"}}></div>}

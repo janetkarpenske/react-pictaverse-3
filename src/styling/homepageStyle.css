@@ -5,11 +5,12 @@ body, html {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   background-color: rgb(21, 28, 32);
-  background-image: url("./img/dark-mtns.jpg");
+  background-image: url("./../img/dark-mtns.jpg");
+  /* background-color: rgb(255, 255, 255); */
   background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .heroText {
 text-align: center;
@@ -17,7 +18,7 @@ position: absolute;
 top: 62%;
 left: 50%;
 transform: translate(-50%, -50%);
-color: white;
+color: rgb(255, 255, 255);
 text-shadow: 2px 2px 4px black;
 }
 .subHead {
@@ -59,14 +60,14 @@ li {
     padding-top: 60px;
     padding-bottom: 30px;
   }
-  a {
+  /* a {
     color: greenyellow;
   }
   a:hover {
     color: rgb(205, 245, 145);
     text-shadow: 3px 3px 8px greenyellow;
     text-decoration: none;
-  }
+  } */
   .about-api-bg {
     background-color: rgb(32, 33, 34);
     height: 45%;
