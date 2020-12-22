@@ -21,7 +21,7 @@ function Map() {
     <GoogleMap 
     defaultZoom={3} 
     defaultCenter={{ lat: 45.6257, lng: -8.6761}}
-    // defaultOptions={{styles: mapStyle}} 
+    defaultOptions={{styles: mapStyle}} 
     >
       {posts.map((post) => (
         <React.Fragment>
@@ -30,21 +30,21 @@ function Map() {
           lat: post.lat,
           lng: post.lng
         }} 
-        // onClick = {() => {
-        //   setMapSelectedPost(post);
-        // }}
+        onClick = {() => {
+          setMapSelectedPost(post);
+        }}
         />
         </React.Fragment>
       ))}
 
-      {/* if (mapSelectedPost != null) {
+      {mapSelectedPost && (
         <InfoWindow
           position={{
           lat: mapSelectedPost.lat,
           lng: mapSelectedPost.lng
         }} >
-        Post Information</InfoWindow>
-        } */}
+        <div>Post Information</div></InfoWindow>
+      )}
     </GoogleMap>
     </React.Fragment>
   ); 

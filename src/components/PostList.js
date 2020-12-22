@@ -27,7 +27,7 @@ function PostList(props){
           mapElement={<div style={{height: "100%"}}></div>}
           />
         </div>
-        <button className="btn btn-dark btn-lg newPostButton" onClick={ () => props.onMainClick() }>Add New Post</button>
+        <button className="btn btn-dark btn-lg newPostButton" onClick={ () => props.onMainClick() }>+ Add New Post</button>
         <div className="container listContainer">
         
         {posts.map((post) => {
