@@ -68,13 +68,14 @@ li {
   }
 .newPostButton {
   margin-left: 40%;
-  margin-top: -420px;
+  margin-top: -460px;
   padding-left: 150px;
     padding-right: 150px;
     background-color: black;
 }
 .listContainer {
-  margin-top: -170px;
+  margin-top: -200px;
+  columns: 2;
 }
   .about-api-bg {
     background-color: rgb(32, 33, 34);
@@ -140,11 +141,11 @@ li {
   text-shadow: 4px 4px 5px greenyellow;
 }
 a {
-  color: rgb(177, 224, 107);
+  color: rgb(239, 245, 230);
 }
 a:hover {
-  color: rgb(205, 245, 145);
-  text-shadow: 3px 3px 8px greenyellow;
+  color: rgb(233, 236, 227);
+  text-shadow: 3px 3px 8px rgb(216, 228, 197);
   text-decoration: none;
 }
 .formHeader {
@@ -193,7 +194,7 @@ a:hover {
   }
   .postHover:hover {
     cursor: pointer;
-    background-color: rgb(207, 204, 204);
+    background-color: rgb(228, 226, 226);
     border-radius: 12px;
   }
 .popupPost {
@@ -202,6 +203,7 @@ a:hover {
   .popupImg {
     width: 300px;
     height: 300px;
+    /* margin: auto; */
     /* height: 250px; */
     object-fit: cover;
   }

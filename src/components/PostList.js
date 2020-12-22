@@ -28,7 +28,7 @@ function PostList(props){
           />
         </div>
         <button className="btn btn-dark btn-lg newPostButton" onClick={ () => props.onMainClick() }>+ Add New Post</button>
-        <div className="container listContainer">
+        <div className="container-fluid listContainer">
         
         {posts.map((post) => {
         
