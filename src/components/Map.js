@@ -42,8 +42,16 @@ function Map() {
           position={{
           lat: mapSelectedPost.lat,
           lng: mapSelectedPost.lng
-        }} >
-        <div>Post Information</div></InfoWindow>
+        }} 
+        onCloseClick={() => {
+          setMapSelectedPost(null);
+        }}
+        >
+        <div className="popupPost">
+          <h4>{mapSelectedPost.name}</h4>
+          <img className="popupImg" src={mapSelectedPost.image}></img>
+        </div>
+        </InfoWindow>
       )}
     </GoogleMap>
     </React.Fragment>

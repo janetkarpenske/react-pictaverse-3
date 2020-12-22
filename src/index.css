@@ -12,7 +12,7 @@ body, html {
 }
 .whiteBackground {
   background-color: rgb(255, 255, 255);
-  padding-bottom: 80px;
+  padding-bottom: 140px;
 }
 .heroText {
 text-align: center;
@@ -63,10 +63,11 @@ li {
     
   }
 .newPostButton {
-  margin-left: 42%;
+  margin-left: 40%;
   margin-top: -420px;
-  padding-left: 100px;
-    padding-right: 100px;
+  padding-left: 150px;
+    padding-right: 150px;
+    background-color: black;
 }
 .listContainer {
   margin-top: -170px;
@@ -148,7 +149,7 @@ a:hover {
   font-size: 50px;
 }
 .formBorder {
- margin-top: 15vh;
+ margin-top: 8vh;
   border: solid black;
   background-color: rgb(21, 33, 44);
   border-radius: 50%;
@@ -164,15 +165,6 @@ a:hover {
   color: rgb(0, 0, 0);
   font-weight: bolder;
 }
-/* .detailPage h3{
-  padding-top: 40px;
-}
-.detailPage {
-  background-color: rgb(233, 233, 233);
-  color: rgb(0, 0, 0);
-  padding: 50px;
-  border-radius: 5px;
-} */
   .postImg {
     width: 600px;
     height: 400px;
@@ -199,4 +191,13 @@ a:hover {
     cursor: pointer;
     background-color: rgb(207, 204, 204);
     border-radius: 12px;
+  }
+.popupPost {
+  font-family: 'Montserrat', sans-serif;
+}
+  .popupImg {
+    width: 300px;
+    height: 300px;
+    /* height: 250px; */
+    object-fit: cover;
   }
