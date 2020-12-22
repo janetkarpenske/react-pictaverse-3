@@ -13,10 +13,10 @@ function PostDetails(props) {
         <img className="detailImg" src={post.image}></img><br/><br/>
         <h4>{post.summary}</h4><br/><br/>
         <h4>Dislikes: {post.dislikes}: Likes: {post.likes}</h4><br/><br/>
-        <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDislike(post.id) }>Dislike</button>
-        <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingLike(post.id) }>Like</button>
-        <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button>
-        <button className="btn btn-outline-dark btn-sm" onClick={ () => onClickingEdit(post.id) }>Edit Post</button>
+        <button className="btn db btn-dark btn-md" onClick={ () => onClickingDislike(post.id) }>Dislike</button>
+        <button className="btn db btn-dark btn-md" onClick={ () => onClickingLike(post.id) }>Like</button>
+        <button className="btn db btn-dark btn-md" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button>
+        <button className="btn db btn-dark btn-md" onClick={ () => onClickingEdit(post.id) }>Edit Post</button>
       </div>
       </div>
     </React.Fragment>

@@ -224,3 +224,22 @@ a:hover {
     font-weight: 800;
     margin-left: 270px;
   }
+  .signinPage h1{
+    font-size: 40px;
+  }
+  .signinPage .card {
+    padding: 30px;
+    padding-bottom: 180px;
+    border: solid black;
+    border-width: 2px;
+    border-radius: 12px;
+  }
+  .signinPage {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10%;
+  }
+  .db {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
