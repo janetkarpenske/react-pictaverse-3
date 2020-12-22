@@ -13,6 +13,10 @@ body, html {
 .whiteBackground {
   background-color: rgb(255, 255, 255);
   padding-bottom: 140px;
+  /* width: 100vw;
+  height: 100vh; */
+  margin-left: -10px;
+  margin-top: -10px;
 }
 .heroText {
 text-align: center;
@@ -47,7 +51,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  margin-top: 58%;
+  margin-top: 56%;
   padding-top: 60px;
   padding-bottom: 60px;
   }
@@ -200,4 +204,21 @@ a:hover {
     height: 300px;
     /* height: 250px; */
     object-fit: cover;
+  }
+  .headerList {
+    height: 50px;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    margin-left: -20px;
+    padding-top: 5px;
+  }
+  .headerList li {
+    
+    display: inline;
+  }
+  .nameItem {
+    letter-spacing: 30px;
+    font-weight: 800;
+    margin-left: 270px;
   }

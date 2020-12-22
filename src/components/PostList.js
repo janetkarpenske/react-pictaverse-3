@@ -16,7 +16,7 @@ function PostList(props){
     return (
       <React.Fragment>
         <div className="whiteBackground">
-        <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2>
+        {/* <h2 className="center-align feedHeader">picta<span className="green">v</span>erse</h2> */}
 
         <div style={{width: '95vw', height: '80vh', marginLeft: '30px'}}>
           <WrappedMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places`} 

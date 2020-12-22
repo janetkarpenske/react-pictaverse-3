@@ -35,12 +35,12 @@ function Homepage (props) {
 
     <div className="about-api-bg center-align">
         <div className="about-api-txt">
-          <h2 id="aboutHead">mapbox and google geocoding api's</h2>
+          <h2 id="aboutHead">google's javascript map & geocoding api's</h2>
           <ul>
             <li><a href="https://github.com/janetkarpenske">mapbox</a></li>
             <li><a href="https://www.linkedin.com/in/janet-karpenske/">google geocoding</a></li>
           </ul>
-          <h4 id="aboutPara">Picatverse is a social-media-site-meets-travel-log. In our day and age the world is at our fingertips when it comes to opportunities for travel and adventure, and Pictaverse seeks to allow users to share those experiences with each other. Sign up for a free account today to be able to share the moments captured on your travels with others. Tag locations, share with friends, add descriptions of your experiences, and most importantly, upload your photos. </h4>
+          <h4 id="aboutPara">Pictaverse utilizes two api's; Google's JavaScript Google Map API and the Google Geocoding API. </h4>
           <hr/>
           <br/>
         </div>
