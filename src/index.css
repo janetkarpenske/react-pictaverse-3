@@ -140,7 +140,7 @@ li {
   text-shadow: 4px 4px 5px greenyellow;
 }
 a {
-  color: greenyellow;
+  color: rgb(177, 224, 107);
 }
 a:hover {
   color: rgb(205, 245, 145);
