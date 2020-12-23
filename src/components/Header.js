@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Header(){  
+
   return (
     <React.Fragment>
     <ul className="headerList">
@@ -14,3 +15,5 @@ function Header(){
 }
 
 export default Header
+
+//<Link to="/">

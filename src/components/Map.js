@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps';
 import mapStyle from './../styling/mapStyle';
-
-//tried importing next two lines to be able to access firestore posts
 import { useSelector } from 'react-redux'
 import { useFirestoreConnect, isLoaded, isEmpty } from 'react-redux-firebase'
 
 function Map() {
   const [mapSelectedPost, setMapSelectedPost] = useState(null);
-
   useFirestoreConnect([
     { collection: 'posts' }
   ]);
-
   const posts = useSelector(state => state.firestore.ordered.posts);
-  //console.log("MAPS Posts: " + posts[0].name);
 
   return (
     <React.Fragment>

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
 import { useFirestore } from 'react-redux-firebase'
@@ -25,7 +24,6 @@ function NewPostForm (props) {
       }
     );
   }
-
   return (
     <React.Fragment>
       <ReusableForm formSubmissionHandler={addPostToFirestore}

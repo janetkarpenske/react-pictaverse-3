@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function PostDetails(props) {
-  const { post, onClickingDislike, onClickingLike, onClickingDelete, onClickingEdit } = props;
+  const { post, onClickingDislike, onClickingLike, onClickingDelete, onClickingEdit, onMainClick } = props;
 
   return (
     <React.Fragment>
@@ -13,6 +13,7 @@ function PostDetails(props) {
         <img className="detailImg" src={post.image}></img><br/><br/>
         <h4>{post.summary}</h4><br/><br/>
         <h4>Dislikes: {post.dislikes}: Likes: {post.likes}</h4><br/><br/>
+        <button className="btn db btn-dark btn-md" onClick={ () => onMainClick() }>Back To Posts</button>
         <button className="btn db btn-dark btn-md" onClick={ () => onClickingDislike(post.id) }>Dislike</button>
         <button className="btn db btn-dark btn-md" onClick={ () => onClickingLike(post.id) }>Like</button>
         <button className="btn db btn-dark btn-md" onClick={ () => onClickingDelete(post.id) }>Remove This Post</button>
@@ -28,6 +29,7 @@ PostDetails.propTypes = {
   onClickingDislike: PropTypes.func,
   onClickingLike: PropTypes.func,
   onClickingDelete: PropTypes.func,
-  onClickingEdit: PropTypes.func
+  onClickingEdit: PropTypes.func,
+  onMainClick: PropTypes.func
 }
 export default PostDetails;

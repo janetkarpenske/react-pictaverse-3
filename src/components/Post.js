@@ -15,8 +15,6 @@ function Post (props) {
           <h4><strong>{props.name}</strong> - {props.location}</h4>
           <p>Summary: {props.summary}</p>
           <h5>Dislikes: {props.dislikes} - Likes: {props.likes}</h5> 
-          {/* <img src={props.image}></img> */}
-        {/* </div> */}
         </div>
         </div>
 

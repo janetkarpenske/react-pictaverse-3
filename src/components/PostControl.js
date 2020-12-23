@@ -128,7 +128,7 @@ render() {
   }
   else if (this.props.selectedPost != null) {
     console.log("CORRECT else statement reached");
-    currentlyVisibleState = <PostDetails post = {this.props.selectedPost} onClickingDislike= {this.handleDislikingPost} onClickingLike= {this.handleLikingPost} onClickingDelete = {this.handleDeletingPost} onClickingEdit = {this.handleEditClick}/>
+    currentlyVisibleState = <PostDetails post = {this.props.selectedPost} onClickingDislike= {this.handleDislikingPost} onClickingLike= {this.handleLikingPost} onClickingDelete = {this.handleDeletingPost} onClickingEdit = {this.handleEditClick} onMainClick={this.handleClick}/>
     buttonText = "Back to List";
   }
   else if (this.props.formVisibleOnPage) {
