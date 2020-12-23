@@ -27,7 +27,7 @@ function Homepage (props) {
             <li><a href="https://www.linkedin.com/in/janet-karpenske/">linkedin</a></li>
             <li><a href="https://drive.google.com/file/d/1C4CIqY169Ey4WgC_ySFwSqbJhshMLXyT/view?usp=sharing">resume</a></li>
           </ul>
-          <h4 id="aboutPara">Picatverse is a social-media-site-meets-travel-log. In our day and age the world is at our fingertips when it comes to opportunities for travel and adventure, and Pictaverse seeks to allow users to share those experiences with each other. Sign up for a free account today to be able to share the moments captured on your travels with others. Tag locations, share with friends, add descriptions of your experiences, and most importantly, upload your photos. </h4>
+          <h4 id="aboutPara">Picatverse is a social-media-site-meets-travel-log. In our day and age the world is at our fingertips when it comes to opportunities for travel and adventure, and Pictaverse seeks to allow users to share those experiences with each other. Sign up for a free account today to be able to share the moments captured on your travels with others. Tag locations, share with friends, add descriptions of your experiences, and most importantly, upload your photos. Users are able to find friends to follow and if they are particularly interested in a specific location they can follow a location as well.</h4>
           <hr/>
           <br/>
         </div>
@@ -40,7 +40,7 @@ function Homepage (props) {
             <li><a href="https://github.com/janetkarpenske">mapbox</a></li>
             <li><a href="https://www.linkedin.com/in/janet-karpenske/">google geocoding</a></li>
           </ul>
-          <h4 id="aboutPara">Pictaverse utilizes two api's; Google's JavaScript Google Map API and the Google Geocoding API. </h4>
+          <h4 id="aboutPara">Pictaverse utilizes two api's; Google's JavaScript Google Map API and the Google Geocoding API. When users create their posts and tag the location Pictaverse makes a call to the geocoding api to find the coordinates of that location. Those coordinates are than fed to the Map api and a marker is placed with a reference to the original post.</h4>
           <hr/>
           <br/>
         </div>
