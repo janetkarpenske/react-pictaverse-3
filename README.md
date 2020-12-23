@@ -9,6 +9,9 @@
 ### Link to Site on Github Pages
 #### This site is currently not hosted.
 
+### Link to Previous Repository
+#### https://github.com/janetkarpenske/react-pictaverse
+
 ## Setup/Installation Requirements
 
 1. Download/Clone The Project from the Github Repo by using link from Github, or open terminal and run command: "git clone https://github.com/janetkarpenske/react-pictaverse"
