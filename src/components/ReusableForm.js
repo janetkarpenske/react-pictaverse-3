@@ -20,14 +20,14 @@ return (
         <input className="form-control" type='text' name='image' placeholder='Image' required/><br/>
         </div>
       </div>
-      {/* <div className="row">
+      <div className="row">
         <div className="col-md-6">
           <input className="form-control" type='text' name='lat' placeholder='Latitude' required/><br/>
         </div>
         <div className="col-md-6">
         <input className="form-control" type='text' name='lng' placeholder='Longitude' required/><br/>
         </div>
-      </div> */}
+      </div>
       <button className="btn btn-light btn-md" type='submit'>{props.buttonText}</button><br/><br/>
     </form>
     </div>
